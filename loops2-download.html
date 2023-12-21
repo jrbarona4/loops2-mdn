@@ -47,6 +47,18 @@
     let input = document.createElement('input');
     let i = 0;
     btn.addEventListener("click", function(){
+      while (i < phonebook.length - 1){
+        if (input.value === phonebook[i].name){
+        para.textContent = `${phonebook[i].name}`;
+        i = 0;
+        break;
+      } else {
+        para.textContent = `No contact found`;
+      }
+      i++;
+      continue;
+      }
+      //para.textContent = `${input.value}`;
       div.appendChild(para);
     });
     btn.textContent = "Click";
